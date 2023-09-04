@@ -51,6 +51,9 @@ body {
 
 .home {
     height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('me-.png') ;
+    background-size: cover;
+    background-position: 1% 5%; 
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -139,4 +142,65 @@ body {
 
 .btn-box a:hover::before {
     width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(181, 116, 241);
+    border-radius: 50%;
+    font-size: 20px;
+    color: rgb(181, 116, 241);
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #120916;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(181, 116, 241);
+    z-index: -1;
+    transition: .5s;
+}
+
+.home-sci a:hover::before {
+    width: 100%;
+
+}
+
+.home-imgHover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 500px;
+    height: 100%;
+    background:transparent;
+    transition: 3s;
+}
+
+.home-imgHover:hover {
+    background: rgba(0,0,0,0.9);
+    opacity: .8;
 }
